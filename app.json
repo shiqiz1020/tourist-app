@@ -1,14 +1,20 @@
 {
   "expo": {
-    "name": "tourist-app",
-    "slug": "tourist-app",
+    "name": "Great Places",
+    "slug": "great-places",
+    "privacy": "public",
     "version": "1.0.0",
+    "sdkVersion": "44.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/places.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash_icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#171717"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -17,16 +23,27 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "io.shiqiz.great_places",
+      "buildNumber": "1.0.0"
     },
     "android": {
+      "package": "io.shiqiz.great_places",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/places-adaptive.png",
+        "backgroundColor": "#171717"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAJU7VqDFi5I1KG4Zly5pmg8TnJaqzTIp8"
+        }
       }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
     }
   }
 }
